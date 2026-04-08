@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "name": "Product Office",
+      "path": "."
+    },
+    {
+      "name": "Agent PO (upstream)",
+      "path": "../Desktop/Agent PO"
+    },
+    {
+      "name": "SelfImproveSkill",
+      "path": "../SelfImproveSkill"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.pytest_cache": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "anthropic.claude-code",
+      "github.vscode-pull-request-github",
+      "yzhang.markdown-all-in-one",
+      "davidanson.vscode-markdownlint",
+      "bierner.markdown-mermaid",
+      "ms-python.python"
+    ]
+  }
+}

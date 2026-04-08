@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"C:/Users/dimos/Desktop/Agent PO/\"*.agent.md \"C:/Users/dimos/Product Office/agents/\")",
+      "Bash(cp \"C:/Users/dimos/Desktop/Agent PO/Product Ownership Governance Framework\"*.md \"C:/Users/dimos/Product Office/governance/framework.md\")"
+    ]
+  }
+}

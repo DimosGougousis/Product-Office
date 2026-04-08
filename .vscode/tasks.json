@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "New PRD",
+      "type": "shell",
+      "command": "echo",
+      "args": [
+        "Run /new-prd <feature-name> in the Claude Code panel. This task is a reminder; the slash command does the actual work."
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "PM Status",
+      "type": "shell",
+      "command": "echo",
+      "args": [
+        "Run /pm-status in the Claude Code panel for the read-only dashboard."
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Validate PRD Links",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/validate-prd-links.py",
+        "product/prds/active/"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Eval Baseline (SelfImproveSkill)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "run_eval.py",
+        "--skill",
+        "office-hours",
+        "--version",
+        "v1"
+      ],
+      "options": {
+        "cwd": "C:\\Users\\dimos\\SelfImproveSkill"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Kanban",
+      "type": "shell",
+      "command": "code-insiders",
+      "args": [
+        "operations/kanban.json"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

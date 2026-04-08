@@ -1,0 +1,20 @@
+# See delivery/github/codeowners.md for rationale
+
+# Constitution and agents — PO sign-off required
+/governance/  @DimosGougousis
+/agents/      @DimosGougousis
+
+# Product
+/product/prds/  @DimosGougousis
+/product/strategy/  @DimosGougousis
+
+# Quality and observability — release-critical
+/quality/acceptance-criteria/  @DimosGougousis
+/observability/slos.md  @DimosGougousis
+
+# CI is critical infra
+/.github/workflows/  @DimosGougousis
+/scripts/  @DimosGougousis
+
+# Default fallback
+*  @DimosGougousis

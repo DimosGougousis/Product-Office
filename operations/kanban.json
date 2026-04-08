@@ -1,0 +1,16 @@
+{
+  "board": "product-office",
+  "updated": null,
+  "columns": {
+    "backlog": [],
+    "research": [],
+    "waiting": [],
+    "review": [],
+    "complete": []
+  },
+  "wip_limits": {
+    "research": 3,
+    "review": 5
+  },
+  "_managed_by": "agents/workflow-automation.agent.md"
+}

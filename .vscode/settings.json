@@ -1,0 +1,49 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD013": false,
+    "MD033": false,
+    "MD041": false
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "PRD-Summary.md": "01-*, 02-*, 03-*, 04-*, 05-*, 06-*, 07-*, 08-*",
+    "*.md": "${capture}.draft.md, ${capture}.notes.md"
+  },
+  "files.exclude": {
+    "**/.tmp": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  "search.exclude": {
+    "**/governance/.tmp": true,
+    "**/team/1-1s": true
+  },
+  "yaml.schemas": {},
+  "cSpell.words": [
+    "Stolberg",
+    "Gherkin",
+    "Kanban",
+    "Niklas",
+    "Luhmann",
+    "PagerDuty",
+    "Snowflake",
+    "tavily",
+    "perplexity",
+    "Nyquist"
+  ]
+}
