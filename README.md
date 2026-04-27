@@ -1,6 +1,6 @@
 # Product Office
 
-A "Team OS" repository that treats product management knowledge — strategy, PRDs, analytics, processes — as a living, version-controlled codebase. Built for collaboration with AI agents (Claude Code, MCP-enabled tooling) and human teammates via GitHub.
+A Product Team Operatin System repository that treats product management knowledge — strategy, PRDs, analytics, processes — as a living, version-controlled codebase. Built for collaboration with AI agents (Claude Code, MCP-enabled tooling) and human teammates via GitHub.
 
 Repo: https://github.com/DimosGougousis/Product-Office
 
