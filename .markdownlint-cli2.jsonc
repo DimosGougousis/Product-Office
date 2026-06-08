@@ -1,0 +1,30 @@
+{
+  // Markdownlint config for the Product Office repo.
+  //
+  // We keep structural rules (blank lines around headings/lists/fences) strict
+  // because they prevent rendering quirks in GitHub and VS Code preview.
+  //
+  // We disable stylistic rules that punish prose-heavy docs:
+  //   MD013 (line-length 80)   — too aggressive for prose; we prefer one
+  //                              sentence per line / soft-wrap in editor.
+  //   MD034 (no-bare-urls)     — README badge URLs are easier to maintain bare.
+  //   MD024 (no-duplicate-heading) — common across nested CLAUDE.md docs.
+  //   MD041 (first-line-heading)   — frontmatter throws this off.
+  "config": {
+    "MD013": false,
+    "MD024": false,
+    "MD034": false,
+    "MD041": false
+  },
+  "globs": [
+    "**/*.md"
+  ],
+  "ignores": [
+    "node_modules",
+    ".git",
+    "governance/.tmp",
+    // Archived design specs from prior sessions — preserved verbatim,
+    // not actively maintained, exempt from lint churn.
+    "docs/superpowers/specs/**"
+  ]
+}
