@@ -1,19 +1,27 @@
 {
   // Markdownlint config for the Product Office repo.
   //
-  // We keep structural rules (blank lines around headings/lists/fences) strict
-  // because they prevent rendering quirks in GitHub and VS Code preview.
+  // Structural rules (blank lines around headings/lists/fences) are STRICT
+  // for prose docs — they prevent rendering quirks in GitHub and VS Code preview.
   //
-  // We disable stylistic rules that punish prose-heavy docs:
-  //   MD013 (line-length 80)   — too aggressive for prose; we prefer one
-  //                              sentence per line / soft-wrap in editor.
-  //   MD034 (no-bare-urls)     — README badge URLs are easier to maintain bare.
-  //   MD024 (no-duplicate-heading) — common across nested CLAUDE.md docs.
-  //   MD041 (first-line-heading)   — frontmatter throws this off.
+  // Stylistic rules disabled because they punish prose-heavy docs OR misfire
+  // on slash-command syntax like `/foo <bar>`:
+  //   MD013 (line-length 80)        — too aggressive for prose
+  //   MD024 (no-duplicate-heading)  — common across nested CLAUDE.md docs
+  //   MD025 (single-h1)             — command docs use H1 for the command itself
+  //                                    AND a separate page H1; that's fine
+  //   MD033 (no-inline-html)        — `<feature-name>` etc. is slash-command
+  //                                    placeholder syntax, not HTML
+  //   MD034 (no-bare-urls)          — README badge URLs are easier to maintain bare
+  //   MD036 (no-emphasis-as-heading) — sometimes legitimate in skill files
+  //   MD041 (first-line-heading)    — frontmatter throws this off
   "config": {
     "MD013": false,
     "MD024": false,
+    "MD025": false,
+    "MD033": false,
     "MD034": false,
+    "MD036": false,
     "MD041": false
   },
   "globs": [
@@ -23,6 +31,12 @@
     "node_modules",
     ".git",
     "governance/.tmp",
+    // Tooling docs (slash commands, skills, AGENTS mirrors) have their own
+    // conventions — frontmatter, command-as-heading, placeholder syntax.
+    // Lint them with their own ruleset when we add one; until then, exempt.
+    ".agents/**",
+    ".claude/commands/**",
+    ".claude/skills/**",
     // Archived design specs from prior sessions — preserved verbatim,
     // not actively maintained, exempt from lint churn.
     "docs/superpowers/specs/**"
