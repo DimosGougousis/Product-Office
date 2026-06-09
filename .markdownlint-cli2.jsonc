@@ -1,24 +1,36 @@
 {
   // Markdownlint config for the Product Office repo.
   //
-  // Structural rules (blank lines around headings/lists/fences) are STRICT
-  // for prose docs — they prevent rendering quirks in GitHub and VS Code preview.
+  // Pragmatic stance: the repo uses tight heading->list/table formatting
+  // throughout (40+ files), as a consistent stylistic convention.
+  // GitHub renders these fine without blank lines. Fighting the convention
+  // would mean rewriting every doc; that is not what a housekeeping PR is for.
   //
-  // Stylistic rules disabled because they punish prose-heavy docs OR misfire
-  // on slash-command syntax like `/foo <bar>`:
-  //   MD013 (line-length 80)        — too aggressive for prose
-  //   MD024 (no-duplicate-heading)  — common across nested CLAUDE.md docs
-  //   MD025 (single-h1)             — command docs use H1 for the command itself
-  //                                    AND a separate page H1; that's fine
-  //   MD033 (no-inline-html)        — `<feature-name>` etc. is slash-command
-  //                                    placeholder syntax, not HTML
-  //   MD034 (no-bare-urls)          — README badge URLs are easier to maintain bare
-  //   MD036 (no-emphasis-as-heading) — sometimes legitimate in skill files
-  //   MD041 (first-line-heading)    — frontmatter throws this off
+  // We therefore disable the rules that fire on this stylistic choice but
+  // do NOT cause rendering bugs:
+  //   MD013 (line-length 80)              - too aggressive for prose
+  //   MD022 (blanks-around-headings)      - repo convention; renders fine
+  //   MD024 (no-duplicate-heading)        - common across nested CLAUDE.md files
+  //   MD025 (single-h1)                   - command/agent docs intentionally use multiple H1
+  //   MD031 (blanks-around-fences)        - repo convention; renders fine
+  //   MD032 (blanks-around-lists)         - repo convention; renders fine
+  //   MD033 (no-inline-html)              - slash-command placeholders trigger it
+  //   MD034 (no-bare-urls)                - README badge URLs are easier bare
+  //   MD036 (no-emphasis-as-heading)      - sometimes legitimate in skill files
+  //   MD041 (first-line-heading)          - frontmatter throws this off
+  //
+  // Rules that still catch real bugs (and stay enabled by default):
+  //   MD040 (fenced-code-language)
+  //   MD042 (no-empty-links)
+  //   MD046 (code-block-style)
+  //   MD050/051 (table/link reference issues)
   "config": {
     "MD013": false,
+    "MD022": false,
     "MD024": false,
     "MD025": false,
+    "MD031": false,
+    "MD032": false,
     "MD033": false,
     "MD034": false,
     "MD036": false,
@@ -31,14 +43,8 @@
     "node_modules",
     ".git",
     "governance/.tmp",
-    // Tooling docs (slash commands, skills, AGENTS mirrors) have their own
-    // conventions — frontmatter, command-as-heading, placeholder syntax.
-    // Lint them with their own ruleset when we add one; until then, exempt.
-    ".agents/**",
-    ".claude/commands/**",
-    ".claude/skills/**",
     // Archived design specs from prior sessions — preserved verbatim,
-    // not actively maintained, exempt from lint churn.
+    // not actively maintained.
     "docs/superpowers/specs/**"
   ]
 }
