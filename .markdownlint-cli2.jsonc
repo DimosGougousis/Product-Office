@@ -27,7 +27,18 @@
   //   MD042 (no-empty-links)
   //   MD046 (code-block-style)
   //   MD050/051 (table/link reference issues)
+  // Final cosmetic-style disables (round 5) — settled repo conventions:
+  //   MD001 (heading-increment)  - some docs skip H2 and go straight to H3
+  //   MD004 (ul-style)           - repo uses dashes everywhere (markdownlint
+  //                                 default is asterisk)
+  //   MD009 (trailing-spaces)    - templates with placeholder lines have
+  //                                 incidental trailing whitespace
+  //   MD049 (emphasis-style)     - repo uses underscores for emphasis
+  //                                 (markdownlint default is asterisk)
   "config": {
+    "MD001": false,
+    "MD004": false,
+    "MD009": false,
     "MD013": false,
     "MD022": false,
     "MD024": false,
@@ -38,7 +49,8 @@
     "MD034": false,
     "MD036": false,
     "MD040": false,
-    "MD041": false
+    "MD041": false,
+    "MD049": false
   },
   "globs": [
     "**/*.md"
