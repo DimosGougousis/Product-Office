@@ -19,8 +19,11 @@
   //   MD036 (no-emphasis-as-heading)      - sometimes legitimate in skill files
   //   MD041 (first-line-heading)          - frontmatter throws this off
   //
+  //   MD040 (fenced-code-language)         - many agent docs use bare ``` blocks
+  //                                          intentionally for non-code samples
+  //                                          (configs, env vars, prose-shaped text)
+  //
   // Rules that still catch real bugs (and stay enabled by default):
-  //   MD040 (fenced-code-language)
   //   MD042 (no-empty-links)
   //   MD046 (code-block-style)
   //   MD050/051 (table/link reference issues)
@@ -34,6 +37,7 @@
     "MD033": false,
     "MD034": false,
     "MD036": false,
+    "MD040": false,
     "MD041": false
   },
   "globs": [
