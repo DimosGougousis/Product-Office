@@ -40,11 +40,12 @@
   //   MD012 (no-multiple-blanks)   governance/framework.md uses double blanks
   //                                  as paragraph separators in long sections
   //   MD055 (table-style)          repo uses different table border styles
-  //   MD056 (table-column-count)   **GENUINE BUG**: some rows in
-  //                                  governance/framework.md tables have
-  //                                  extra | cells. Disabled here so this PR
-  //                                  unblocks; tracked separately for a
-  //                                  follow-up cleanup of that file's tables.
+  //
+  // MD056 (table-column-count) was temporarily disabled to unblock the
+  // chore: agents-mirror-and-housekeeping PR. Re-enabled after the
+  // governance/framework.md spreadsheet-layout tables were corrected to
+  // include a leading row-label column in the header (was a real GitHub
+  // rendering bug: extra body cells were silently dropped).
   "config": {
     "MD001": false,
     "MD003": false,
@@ -63,8 +64,7 @@
     "MD040": false,
     "MD041": false,
     "MD049": false,
-    "MD055": false,
-    "MD056": false
+    "MD055": false
   },
   "globs": [
     "**/*.md"
