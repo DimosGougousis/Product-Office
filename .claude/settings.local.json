@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(cp \"C:/Users/dimos/Desktop/Agent PO/\"*.agent.md \"C:/Users/dimos/Product Office/agents/\")",
-      "Bash(cp \"C:/Users/dimos/Desktop/Agent PO/Product Ownership Governance Framework\"*.md \"C:/Users/dimos/Product Office/governance/framework.md\")"
+      "Bash(cp \"C:/Users/dimos/Desktop/Agent PO/Product Ownership Governance Framework\"*.md \"C:/Users/dimos/Product Office/governance/framework.md\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\dimos\\\\Product Office\\\\docs\\\\superpowers\\\\specs\")",
+      "Bash(mkdir -p \"C:/Users/dimos/Synthetic Loan/.claude/skills\" \"C:/Users/dimos/Synthetic Loan/.claude/commands\" \"C:/Users/dimos/Synthetic Loan/.claude/plans\" \"C:/Users/dimos/Synthetic Loan/src/loan_tape/validate\" \"C:/Users/dimos/Synthetic Loan/src/loan_tape/analytics\" \"C:/Users/dimos/Synthetic Loan/src/loan_tape/ecl\" \"C:/Users/dimos/Synthetic Loan/src/loan_tape/io\" \"C:/Users/dimos/Synthetic Loan/app/pages\" \"C:/Users/dimos/Synthetic Loan/tests/unit\" \"C:/Users/dimos/Synthetic Loan/tests/integration\" \"C:/Users/dimos/Synthetic Loan/tests/fixtures\" \"C:/Users/dimos/Synthetic Loan/evals/datasets\" \"C:/Users/dimos/Synthetic Loan/evals/rubrics\" \"C:/Users/dimos/Synthetic Loan/evals/results\" \"C:/Users/dimos/Synthetic Loan/data/reference\" \"C:/Users/dimos/Synthetic Loan/data/samples\" \"C:/Users/dimos/Synthetic Loan/docs/governance\" \"C:/Users/dimos/Synthetic Loan/docs/appendix\" \"C:/Users/dimos/Synthetic Loan/.github/workflows\")"
     ]
   }
 }

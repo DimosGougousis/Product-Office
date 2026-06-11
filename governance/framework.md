@@ -2045,8 +2045,8 @@ Go to: `Format → Conditional formatting`
 
 #### **Rename Sheet 2 → "Customer Health"**
 
-| A | B | C | D | E | F | G | H | I | J |
-|---|-----|---------|----------------|-----------|-------|------------------|------------|--------|----------|
+|   | A | B | C | D | E | F | G | H | I | J |
+|---|---|-----|---------|----------------|-----------|-------|------------------|------------|--------|----------|
 | **Row 1** | Customer ID | Industry | ARR | Usage Score | Support Tickets (30d) | Compliance Flags | NPS | Risk Level | Owner | Action Required |
 
 #### **Sample Data Entry:**
@@ -2068,8 +2068,8 @@ Paste this into cell H2 and drag down:
 
 #### **Rename Sheet 3 → "Features"**
 
-| A | B | C | D | E | F | G | H | I | J |
-|---|-----|---------|------------------|-----------|----------|------------|-------|--------|-------------|
+|   | A | B | C | D | E | F | G | H | I | J |
+|---|---|-----|---------|------------------|-----------|----------|------------|-------|--------|-------------|
 | **Row 1** | Feature Name | Launch Date | Adoption Rate (30d) | Active Users | Support Tickets Related | Churn Impact | Revenue Impact | Owner | Status | Next Review |
 
 #### **Sample Data Entry:**
@@ -2091,8 +2091,8 @@ Paste into cell I2:
 
 #### **Rename Sheet 4 → "Releases"**
 
-| A | B | C | D | E | F | G | H | I | J |
-|---|-----|---------|-----------|--------------------------|-----------|----------------------------|--------------------|-------|--------|
+|   | A | B | C | D | E | F | G | H | I | J |
+|---|---|-----|---------|-----------|--------------------------|-----------|----------------------------|--------------------|-------|--------|
 | **Row 1** | Release Date | Version | Features Shipped | Rollback Required? | Compliance Audit Passed? | Customer Impact | Performance Degradation? | Post-Mortem Needed? | Owner | Status |
 
 #### **Sample Data Entry:**
@@ -2114,8 +2114,8 @@ Paste into cell H2:
 
 #### **Rename Sheet 5 → "Support Requests"**
 
-| A | B | C | D | E | F | G | H | I | J |
-|---|-----|-----------------------------------|-----------|----------------------------|------------------|-------------|--------|--------------|-----------------|
+|   | A | B | C | D | E | F | G | H | I | J |
+|---|---|-----|-----------------------------------|-----------|----------------------------|------------------|-------------|--------|--------------|-----------------|
 | **Row 1** | Request ID | Customer | Category (Feature/Bug/Compliance) | Priority (P0-P3) | Estimated Effort (Sprint Weeks) | Revenue Impact | Assigned To | Status | SLA Due Date | Resolution Notes |
 
 #### **Sample Data Entry:**
@@ -2144,8 +2144,8 @@ Go to `Format → Conditional Formatting` for Column D:
 
 #### **Rename Sheet 6 → "Compliance"**
 
-| A | B | C | D | E | F | G | H | I |
-|---|-----|-----------|-----------------------|----------------------------|------------------|--------------------------|-------|-------|
+|   | A | B | C | D | E | F | G | H | I |
+|---|---|-----|-----------|-----------------------|----------------------------|------------------|--------------------------|-------|-------|
 | **Row 1** | Date | Regulation | Change Required | Implementation Status | Customer Notification Sent? | Effective Date | Risk if Not Compliant | Owner | Notes |
 
 #### **Sample Data Entry:**

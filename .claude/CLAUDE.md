@@ -3,6 +3,7 @@
 Skills and slash commands **specific to this Product Office repo**. Globally-deployed skills (the Nine-Organ pipeline) live in `~/.claude/commands/` and are not duplicated here.
 
 ## Skills (`.claude/skills/`)
+
 | Skill | Purpose |
 |---|---|
 | `writing-guide.md` | Tone, formatting rules, "10x" examples |
@@ -19,6 +20,7 @@ Skills and slash commands **specific to this Product Office repo**. Globally-dep
 | `release-readiness-check.md` | Pre-release gate |
 
 ## Commands (`.claude/commands/`)
+
 | Command | Action |
 |---|---|
 | `/new-prd <name>` | Branch + scaffold PRD from template |
@@ -30,4 +32,5 @@ Skills and slash commands **specific to this Product Office repo**. Globally-dep
 | `/eval-run <name>` | Execute eval and write results |
 
 ## Plans
+
 `.claude/plans/` archives saved plan files from complex past tasks (one per significant initiative).
