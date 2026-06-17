@@ -1,0 +1,48 @@
+{
+  "run_id": "yuup-eval-001-test",
+  "cases": [
+    {
+      "case": "eval-001",
+      "title": "Research + Process Design (two-agent sequential)",
+      "passed": false,
+      "details": [
+        "Routing: expected=['research', 'process-designer`'], seen=['process-designer', 'research'] -> FAIL"
+      ]
+    },
+    {
+      "case": "eval-002",
+      "title": "Budget Breach (orchestrator stops)",
+      "passed": false,
+      "details": [
+        "Budget: breaches=0, dispatches=2 -> FAIL"
+      ]
+    },
+    {
+      "case": "eval-003",
+      "title": "Critique Reject (stops and surfaces)",
+      "passed": false,
+      "details": [
+        "Reject verdict: ['PASS', 'PASS'] -> FAIL"
+      ]
+    },
+    {
+      "case": "eval-004",
+      "title": "Read-only Agent Cannot Write (tool scoping)",
+      "passed": true,
+      "details": [
+        "Agent: seen=['process-designer', 'research'], writes=False -> PASS"
+      ]
+    },
+    {
+      "case": "eval-005",
+      "title": "Acceptance Criteria Passed to Critique",
+      "passed": false,
+      "details": [
+        "Critique: dispatched=False, pass=False -> FAIL"
+      ]
+    }
+  ],
+  "overall": "FAIL",
+  "passed_count": 1,
+  "total_count": 5
+}

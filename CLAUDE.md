@@ -3,42 +3,55 @@
 > Lean entry point for Claude Code and other AI agents. This file is the **map**, not the data. Drill into nested `CLAUDE.md` files for domain context.
 
 ## Doc Index
-| Folder | Purpose |
-|---|---|
-| `governance/` | The constitution: framework, directives (Layer 1), execution scripts (Layer 3) |
-| `agents/` | The 11 PO agents (Layer 2 orchestration) — see registry below |
-| `product/` | PRDs, strategy, competitive intel, discovery, decisions |
-| `pipeline/` | Nine-Organ PM Framework artifacts per initiative (REQUIREMENTS → VALIDATION) |
-| `analytics/` | Schemas, queries, metrics, playbooks, reports |
-| `engineering/` | RFCs, bug investigations, architecture |
-| `delivery/` | GitHub workflow, CI/CD, release process, environments |
-| `quality/` | Acceptance criteria, DoD/DoR, evals, UAT, self-improve harness link |
-| `observability/` | SLOs, SLIs, dashboards, alerts, incidents |
-| `operations/` | Rituals, RACI, runbooks |
-| `team/` | Directory, onboarding, 1:1 notes (private) |
-| `.claude/` | Skills and slash commands specific to this repo |
-| `.github/` | PR templates, issue templates, CI workflows |
-| `.vscode/` | VS Code Insiders workspace config |
-| `docs/` | MCP setup, contributor guides |
+| Folder            | Purpose                                                                        |
+| ----------------- | ------------------------------------------------------------------------------ |
+| `governance/`     | The constitution: framework, directives (Layer 1), execution scripts (Layer 3) |
+| `agents/`         | The 11 PO agents (Layer 2 orchestration) — see registry below                  |
+| `.claude/agents/` | YUUP runnable subagents (Claude Code runtime) — see YUUP roster                |
+| `product/`        | PRDs, strategy, competitive intel, discovery, decisions                        |
+| `pipeline/`       | Nine-Organ PM Framework artifacts per initiative (REQUIREMENTS → VALIDATION)   |
+| `analytics/`      | Schemas, queries, metrics, playbooks, reports                                  |
+| `engineering/`    | RFCs, bug investigations, architecture                                         |
+| `delivery/`       | GitHub workflow, CI/CD, release process, environments                          |
+| `quality/`        | Acceptance criteria, DoD/DoR, evals, UAT, self-improve harness link            |
+| `observability/`  | SLOs, SLIs, dashboards, alerts, incidents                                      |
+| `operations/`     | Rituals, RACI, runbooks                                                        |
+| `team/`           | Directory, onboarding, 1:1 notes (private)                                     |
+| `.claude/`        | Skills and slash commands specific to this repo                                |
+| `.github/`        | PR templates, issue templates, CI workflows                                    |
+| `.vscode/`        | VS Code Insiders workspace config                                              |
+| `docs/`           | MCP setup, contributor guides                                                  |
 
 ## Agent Registry
 All 11 agents live in `agents/`. Route by intent:
 
-| Intent | Agent | File |
-|---|---|---|
-| Draft a PRD | prd-creation | `agents/prd-creation.agent.md` |
-| Move tickets through Kanban | workflow-automation | `agents/workflow-automation.agent.md` |
-| Sync PRD ↔ Jira | jira-integration | `agents/jira-integration.agent.md` |
-| Notify team / slash commands | slack-integration | `agents/slack-integration.agent.md` |
-| Attach files / Drive folders | google-drive-integration | `agents/google-drive-integration.agent.md` |
-| Detect bottlenecks | ai-insights | `agents/ai-insights.agent.md` |
-| Find conflicts across PRDs | conflict-resolution | `agents/conflict-resolution.agent.md` |
+| Intent                             | Agent                    | File                                       |
+| ---------------------------------- | ------------------------ | ------------------------------------------ |
+| Draft a PRD                        | prd-creation             | `agents/prd-creation.agent.md`             |
+| Move tickets through Kanban        | workflow-automation      | `agents/workflow-automation.agent.md`      |
+| Sync PRD ↔ Jira                    | jira-integration         | `agents/jira-integration.agent.md`         |
+| Notify team / slash commands       | slack-integration        | `agents/slack-integration.agent.md`        |
+| Attach files / Drive folders       | google-drive-integration | `agents/google-drive-integration.agent.md` |
+| Detect bottlenecks                 | ai-insights              | `agents/ai-insights.agent.md`              |
+| Find conflicts across PRDs         | conflict-resolution      | `agents/conflict-resolution.agent.md`      |
 | Generate RACI / brief stakeholders | stakeholder-intelligence | `agents/stakeholder-intelligence.agent.md` |
-| Edit / export PRD content | content-documentation | `agents/content-documentation.agent.md` |
-| KPI dashboards / reports | dashboard-reporting | `agents/dashboard-reporting.agent.md` |
-| Cascade actions across systems | integration-orchestrator | `agents/integration-orchestrator.agent.md` |
+| Edit / export PRD content          | content-documentation    | `agents/content-documentation.agent.md`    |
+| KPI dashboards / reports           | dashboard-reporting      | `agents/dashboard-reporting.agent.md`      |
+| Cascade actions across systems     | integration-orchestrator | `agents/integration-orchestrator.agent.md` |
 
 **Rule:** Only `integration-orchestrator` may invoke external systems in cascade. Approval gates in `governance/directives/approval-gates.md`.
+
+## YUUP — Agent Orchestrator
+Launch with `/yuup "<objective>"`. YUUP plans, dispatches specialists (from `.claude/agents/`), runs a critique loop, and returns a synthesized result — autonomous within a session, stopping only at approval gates.
+
+| Agent              | Dispatch Trigger                                                   |
+| ------------------ | ------------------------------------------------------------------ |
+| `robot`            | Automation, scripting, MCP wiring, CI hooks, integration build     |
+| `research`         | Research, competitive intel, codebase archaeology, tool comparison |
+| `process-designer` | SOPs, directives, RACI, checklists, workflow design                |
+| `critique`         | Review deliverables, quality gate, adversarial QA                  |
+
+See `.claude/agents/ROSTER.md` for the full command registry and bridge to the existing 11 persona agents. Add agents with `/new-agent <name>`.
 
 ## Nine-Organ Pipeline (already deployed at `~/.claude/commands/`)
 `idea → /office-hours → /plan-ceo-review → /plan-eng-review → /gsd-plan → /gsd-execute → /gsd-review`. `/pm-status` is callable any time. Per-initiative artifacts land in `pipeline/active/<name>/`.
