@@ -1,0 +1,27 @@
+{
+  "timestamp": "20260616T150455Z",
+  "golden_cases": 5,
+  "cases": [
+    {
+      "id": "eval-001",
+      "status": "not_run"
+    },
+    {
+      "id": "eval-002",
+      "status": "not_run"
+    },
+    {
+      "id": "eval-003",
+      "status": "not_run"
+    },
+    {
+      "id": "eval-004",
+      "status": "not_run"
+    },
+    {
+      "id": "eval-005",
+      "status": "not_run"
+    }
+  ],
+  "note": "Eval runner is a stub. Wire to YUUP run traces after Phase 4 verification."
+}

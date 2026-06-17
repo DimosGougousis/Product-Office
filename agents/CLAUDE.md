@@ -1,5 +1,10 @@
 # Agents Folder
 
+> **Runtime orchestrator (YUUP):** `.claude/agents/` contains the runnable subagents dispatched by
+> `/yuup`. The files in this folder are persona specs for the external "PRD Partner" app.
+> YUUP references them for domain conventions only. See `.claude/agents/ROSTER.md` for the
+> dispatch roster and `governance/directives/agent-orchestration.md` for the Layer 1 directive.
+
 The 11 PO agents (Layer 2 of the governance framework). Each is a self-contained markdown directive.
 
 ## Routing Rules
@@ -18,16 +23,16 @@ Per `governance/directives/approval-gates.md`, any agent action that:
 …requires explicit user approval before execution.
 
 ## Files
-| Agent | Owner Domain |
-|---|---|
-| `prd-creation.agent.md` | `product/prds/` |
-| `workflow-automation.agent.md` | `operations/kanban.json` |
-| `jira-integration.agent.md` | Jira (external) |
-| `slack-integration.agent.md` | Slack (external) |
-| `google-drive-integration.agent.md` | Google Drive (external) |
-| `ai-insights.agent.md` | `analytics/`, Kanban history |
-| `conflict-resolution.agent.md` | `product/decisions/conflicts/` |
-| `stakeholder-intelligence.agent.md` | `team/directory.md` |
-| `content-documentation.agent.md` | `product/prds/`, `delivery/releases/` |
-| `dashboard-reporting.agent.md` | `analytics/reports/` |
-| `integration-orchestrator.agent.md` | All of the above |
+| Agent                               | Owner Domain                          |
+| ----------------------------------- | ------------------------------------- |
+| `prd-creation.agent.md`             | `product/prds/`                       |
+| `workflow-automation.agent.md`      | `operations/kanban.json`              |
+| `jira-integration.agent.md`         | Jira (external)                       |
+| `slack-integration.agent.md`        | Slack (external)                      |
+| `google-drive-integration.agent.md` | Google Drive (external)               |
+| `ai-insights.agent.md`              | `analytics/`, Kanban history          |
+| `conflict-resolution.agent.md`      | `product/decisions/conflicts/`        |
+| `stakeholder-intelligence.agent.md` | `team/directory.md`                   |
+| `content-documentation.agent.md`    | `product/prds/`, `delivery/releases/` |
+| `dashboard-reporting.agent.md`      | `analytics/reports/`                  |
+| `integration-orchestrator.agent.md` | All of the above                      |
